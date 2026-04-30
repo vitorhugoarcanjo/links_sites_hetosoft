@@ -1,0 +1,57 @@
+Quero que você crie para mim um projeto Flask completo e os arquivos de instalação no Windows para um sistema simples de menu de links.
+
+Contexto do projeto:
+- É um app Flask bem simples, com uma página principal (`index.html`) que mostra vários links de sites que eu uso no dia a dia.
+- O projeto deve usar a estrutura padrão do Flask com:
+  - `app.py`
+  - `templates/index.html`
+  - `static/index.css`
+  - `requirements.txt`
+  - `.gitignore`
+
+O que preciso que você gere:
+1. Revisar e corrigir meu HTML, incluindo erros de digitação e atributos incorretos.
+2. Organizar a estrutura do projeto Flask corretamente.
+3. Criar `requirements.txt` com Flask.
+4. Criar `.gitignore` ignorando `venv`, `__pycache__` e arquivos temporários do Python.
+5. Criar um script de instalação para Windows, preferencialmente em `.bat`, com estas regras:
+   - verificar se existe unidade `D:\`
+   - se existir, instalar em `D:\links_sites`
+   - se não existir, instalar em `C:\links_sites`
+   - se a pasta já existir e for um repositório Git, fazer `git pull`
+   - se não existir, fazer `git clone` do meu repositório GitHub
+   - criar o ambiente virtual com `python -m venv venv`
+   - ativar o ambiente virtual
+   - atualizar o pip
+   - instalar dependências com `pip install -r requirements.txt`
+   - iniciar a aplicação Flask no final
+6. Criar também um script separado de inicialização, por exemplo `start_links_sites.bat`, que:
+   - acesse a pasta do projeto
+   - ative a venv
+   - execute o app Flask
+7. Configurar para iniciar automaticamente com o Windows quando o usuário fizer login.
+   Quero que você escolha a forma mais simples e confiável entre:
+   - criar atalho/script na pasta Startup do Windows
+   - ou criar tarefa no Agendador de Tarefas (Task Scheduler) no logon do usuário
+8. Se usar inicialização automática:
+   - explicar qual método foi escolhido
+   - gerar o script necessário
+   - garantir que a janela abra normalmente quando eu entrar no Windows
+9. Me entregar tudo pronto com passo a passo de uso:
+   - o que devo editar (como URL do GitHub)
+   - como executar a instalação
+   - como testar
+   - como remover da inicialização automática se eu quiser depois
+
+Importante:
+- Quero explicação didática, em português do Brasil.
+- Quero os arquivos completos, não apenas trechos.
+- Quero que o instalador funcione no Windows 10/11.
+- Quero que o projeto fique preparado para eu manter sozinho depois.
+- Se necessário, pode gerar também uma versão `.ps1`, mas priorize `.bat`.
+- Não use Docker.
+- Não complique com empacotador `.exe` por enquanto.
+- Foque em algo simples, funcional e fácil de manter.
+
+Meu objetivo:
+Quero instalar esse menu de links localmente no Windows, deixar atualizado via GitHub, com venv e Flask configurados automaticamente, e fazer ele iniciar sozinho quando eu ligar o PC.
