@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def iniapp():
-    return render_template('index.html')
+def ini_app():
+    return render_template('pasta_inicio/inicio.html')
 
 
 if __name__ == '__main__':

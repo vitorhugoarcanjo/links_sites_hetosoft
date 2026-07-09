@@ -1,0 +1,87 @@
+/* ==========================================
+   TELA INICIAL
+   ========================================== */
+
+.section_row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    width: 100%;
+    align-items: start;
+}
+
+/* Cada card */
+.section_row > section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.section_row > section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+/* Container interno */
+.sefaz,
+.nfce_nfe,
+.nfse,
+.tab_tributacao,
+.container_hetosoft {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Título */
+.section_row h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1a1a2e;
+    font-size: 18px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Links */
+.section_row a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: #2c3e50;
+
+    padding: 12px;
+    border-radius: 8px;
+
+    background: #f5f7fa;
+    border: 1px solid #dfe6e9;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: all .25s ease;
+}
+
+.section_row a:hover {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+    transform: translateY(-2px);
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .section_row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .section_row {
+        grid-template-columns: 1fr;
+    }
+}
