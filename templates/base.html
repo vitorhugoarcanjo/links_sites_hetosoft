@@ -20,9 +20,16 @@
 
         <ul class="menu-links">
             <li>
-                <a href="{{ url_for('ini_app') }}" class="{% if request.path.startswith('/') %}ativo{% endif %}">
+                <a href="{{ url_for('ini_app') }}" class="{% if request.path == '/' %}ativo{% endif %}">
                     <span class="icone">🏠</span>
-                    <span class="texto">LINKS PAGINAS</span>
+                    <span class="texto">Links páginas</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('clientes.ini_clientes') }}" class="{% if request.path.startswith('/clientes') %}ativo{% endif %}">
+                    <span class="icone">👤</span>
+                    <span class="texto">Clientes Conexões</span>
                 </a>
             </li>
 
@@ -35,7 +42,7 @@
                  CONFIGURAÇÕES
             ========================================== -->
             <li>
-                <a href="#" class="{% if request.path.startswith('/') %}ativo{% endif %}">
+                <a href="#" class="{% if request.path.startswith('/#') %}ativo{% endif %}">
                     <span class="icone">⚙️</span>
                     <span class="texto">Configurações</span>
                 </a>

@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import render_template
 
-bp_clientes = Blueprint('conexoes_externas', __name__)
-
+def ini_clientes():
+    return render_template('pasta_clientes/clientes.html')
